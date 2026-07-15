@@ -1,6 +1,18 @@
 /* script.js */
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Preloader Fade Out
+  const preloader = document.getElementById("page-preloader");
+  if (preloader) {
+    setTimeout(() => {
+      preloader.classList.add("fade-out");
+      document.body.classList.remove("preloader-active");
+      setTimeout(() => {
+        preloader.remove();
+      }, 600); // match transition duration
+    }, 3500); // 3.5s loading time
+  }
+
   // Mobile Menu Toggle
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");

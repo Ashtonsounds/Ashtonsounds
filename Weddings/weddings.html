@@ -3,19 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weddings | Ashton Sounds</title>
+    <title>Weddings | Professional Sound, DJ & MC Services | Ashton Sounds</title>
+    
+    <!-- Meta Descriptions & Keywords -->
+    <meta name="description" content="Make your wedding day unforgettable with Ashton Sounds. High-quality sound systems, professional wedding DJs, engaging MCs, and lighting in Naivasha and Mai-Mahiu.">
+    <meta name="keywords" content="Wedding DJ Naivasha, Wedding Sound System, Wedding MC Naivasha, Ashton Sounds Weddings, Sound equipment hire for weddings Naivasha">
+    <meta name="author" content="Ashton Sounds">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#FDB913">
+    <link rel="canonical" href="https://ashtonsounds.com/Weddings/weddings.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ashtonsounds.com/Weddings/weddings.html">
+    <meta property="og:title" content="Weddings | Ashton Sounds">
+    <meta property="og:description" content="Professional sound systems, DJ, and MC services tailored for your dream wedding in Naivasha & Mai-Mahiu.">
+    <meta property="og:image" content="https://ashtonsounds.com/Weddings/Images/Wedding1.jpg">
+    <meta property="og:site_name" content="Ashton Sounds">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Weddings | Ashton Sounds">
+    <meta name="twitter:description" content="Professional sound systems, DJ, and MC services tailored for your dream wedding in Naivasha & Mai-Mahiu.">
+    <meta name="twitter:image" content="https://ashtonsounds.com/Weddings/Images/Wedding1.jpg">
+
+    <!-- Preconnect & Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS & Favicon -->
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/png" href="../Misc/Favicon.png">
 </head>
 <body class="preloader-active">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Preloader -->
-    <div id="page-preloader">
+    <div id="page-preloader" aria-hidden="true">
         <div class="preloader-content">
             <div class="preloader-logo-container">
-                <img src="../Misc/Favicon.png" alt="Ashton Sounds Logo" class="preloader-logo">
+                <img src="../Misc/Favicon.png" alt="Ashton Sounds Logo" class="preloader-logo" fetchpriority="high" decoding="async">
                 <div class="preloader-ring"></div>
             </div>
             <div class="preloader-text">Ashton Sounds</div>
@@ -26,9 +54,14 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <nav>
-                <div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none; display: flex; align-items: center;"><img src="../Misc/Favicon.png" alt="Ashton Sounds Logo" style="height: 40px; margin-right: 10px;">Ashton<span>Sounds</span></a></div>
-                <ul class="nav-links">
+            <nav aria-label="Main Navigation">
+                <div class="logo">
+                    <a href="../index.html" style="color: inherit; text-decoration: none; display: flex; align-items: center;">
+                        <img src="../Misc/Favicon.png" alt="Ashton Sounds Logo" style="height: 42px; width: auto; margin-right: 12px;" fetchpriority="high" decoding="async">
+                        Ashton<span>Sounds</span>
+                    </a>
+                </div>
+                <ul class="nav-links" id="primary-nav">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../Weddings/weddings.html" class="active">Weddings</a></li>
                     <li><a href="../Ruracios/ruracios.html">Ruracios</a></li>
@@ -38,135 +71,135 @@
                     <li><a href="../Church Events/church.html">Church</a></li>
                     <li><a href="../Burials/burials.html">Burials</a></li>
                 </ul>
-                <div class="hamburger">
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="section-padding" style="background: var(--secondary-color); text-align: center;">
-        <div class="container">
-            <h1>Weddings</h1>
-            <p style="color: var(--text-muted);">Make your special day unforgettable.</p>
-        </div>
-    </section>
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="section-padding text-center" style="background: var(--secondary-color);">
+            <div class="container">
+                <h1 class="gold-text">Weddings</h1>
+                <p style="color: var(--text-muted); font-size: 1.2rem;">Make your special day truly unforgettable.</p>
+            </div>
+        </section>
 
-    <!-- Content Intro -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2 class="gold-text">Professional Sound and Entertainment for Weddings</h2>
-                    <p>We provide professional sound systems, DJ, and MC services tailored for weddings. We ensure every moment, from the ceremony to the reception, sounds perfect.</p>
-                    <br>
-                    <p>Our wedding services include:</p>
-                    <ul class="banner-list" style="margin-top: 15px;">
-                        <li>Clear audio for the ceremony vows</li>
-                        <li>High-energy reception DJ mixing</li>
-                        <li>Professional and engaging MCs</li>
-                        <li>Wireless microphones for speeches</li>
-                    </ul>
+        <!-- Content Intro -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2 class="gold-text">Professional Sound and Entertainment for Weddings</h2>
+                        <p>We provide high-fidelity sound systems, talented DJs, and engaging MC services tailored for weddings. We ensure every moment, from solemn vows to high-energy reception dancing, sounds perfect.</p>
+                        <p>Our wedding packages include:</p>
+                        <ul class="banner-list" style="margin-top: 15px;">
+                            <li>Crystal clear audio for ceremony vows and exchange</li>
+                            <li>High-energy reception DJ live mixing</li>
+                            <li>Professional, charismatic MCs to guide the ceremony</li>
+                            <li>Wireless lapel and handheld microphones for speeches</li>
+                        </ul>
+                    </div>
+                    <div class="about-img">
+                        <img src="Images/Wedding1.jpg" alt="Ashton Sounds Wedding Audio Setup" fetchpriority="high" decoding="async" style="border-radius: 12px;">
+                    </div>
                 </div>
-                <div class="about-img">
-                    <img src="Images/Wedding1.jpg" alt="Weddings">
+                <div class="text-center" style="margin-top: 50px;">
+                    <a href="https://api.whatsapp.com/send?phone=254724850033&text=Hello%20Ashton%20Sounds%20I%20am%20interested%20in%20your%20wedding%20services." class="btn" target="_blank" rel="noopener noreferrer">Contact Us on WhatsApp</a>
                 </div>
             </div>
-            <div class="text-center" style="margin-top: 50px;">
-                <a href="https://api.whatsapp.com/send?phone=254724850033&text=Hello%20Ashton%20Sounds%20I%20am%20interested%20in%20your%20wedding%20services." class="btn">Contact Us on WhatsApp</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Gallery Section -->
-    <section class="section-padding" style="background-color: var(--secondary-color);">
-        <div class="container">
-            <h2 class="text-center" style="margin-bottom: 40px;">Our Wedding Portfolio</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="Images/Wedding1.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding2.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding3.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding4.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding5.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding6.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding7.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding8.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding9.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding10.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding11.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding12.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding13.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding14.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding15.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding16.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding17.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding18.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding19.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding20.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding21.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding22.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding23.jpg" alt="Wedding Setup"></div>
-                <div class="gallery-item"><img src="Images/Wedding24.jpg" alt="Wedding Setup"></div>
-                <!--<div class="gallery-item"><img src="Images/Wedding25.jpg" alt="Wedding Setup"></div>-->
+        <!-- Gallery Section -->
+        <section class="gallery-section section-padding" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <h2 class="text-center gold-text" style="margin-bottom: 2rem;">Our Wedding Portfolio</h2>
+                <p class="text-center" style="margin-bottom: 2rem;">Click any image to view in fullscreen lightbox viewer.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="Images/Wedding1.jpg" alt="Wedding Setup 1" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding2.jpg" alt="Wedding Setup 2" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding3.jpg" alt="Wedding Setup 3" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding4.jpg" alt="Wedding Setup 4" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding5.jpg" alt="Wedding Setup 5" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding6.jpg" alt="Wedding Setup 6" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding7.jpg" alt="Wedding Setup 7" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding8.jpg" alt="Wedding Setup 8" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding9.jpg" alt="Wedding Setup 9" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding10.jpg" alt="Wedding Setup 10" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding11.jpg" alt="Wedding Setup 11" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding12.jpg" alt="Wedding Setup 12" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding13.jpg" alt="Wedding Setup 13" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding14.jpg" alt="Wedding Setup 14" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding15.jpg" alt="Wedding Setup 15" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding16.jpg" alt="Wedding Setup 16" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding17.jpg" alt="Wedding Setup 17" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding18.jpg" alt="Wedding Setup 18" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding19.jpg" alt="Wedding Setup 19" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding20.jpg" alt="Wedding Setup 20" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding21.jpg" alt="Wedding Setup 21" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding22.jpg" alt="Wedding Setup 22" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding23.jpg" alt="Wedding Setup 23" loading="lazy" decoding="async"></div>
+                    <div class="gallery-item"><img src="Images/Wedding24.jpg" alt="Wedding Setup 24" loading="lazy" decoding="async"></div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Video Section -->
-    <section class="video-section section-padding" style="background: var(--light-bg);">
-        <div class="container text-center">
-            <h2 class="gold-text" style="margin-bottom: 2rem;">Wedding Event Videos</h2>
-            <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
-                <video src="../Videos/Wedding1.mp4" controls muted playsinline class="scroll-video" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);"></video>
-                <video src="../Videos/Wedding2.mp4" controls muted playsinline class="scroll-video" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);"></video>
-                <video src="../Videos/Wedding3.mp4" controls muted playsinline class="scroll-video" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);"></video>
-                <video src="../Videos/Wedding4.mp4" controls muted playsinline class="scroll-video" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);"></video>
-                <video src="../Videos/Wedding5.mp4" controls muted playsinline class="scroll-video" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);"></video>
-                <video src="../Videos/Wedding6.mp4" controls muted playsinline class="scroll-video" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);"></video>
-                <video src="../Videos/Wedding7.mp4" controls muted playsinline class="scroll-video" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);"></video>
-                <video src="../Videos/Wedding9.mp4" controls muted playsinline class="scroll-video" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);"></video>
-                <video src="../Videos/Wedding10.mp4" controls muted playsinline class="scroll-video" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);"></video>
-                <video src="../Videos/Wedding11.mp4" controls muted playsinline class="scroll-video" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);"></video>
-                <video src="../Videos/Wedding12.mp4" controls muted playsinline class="scroll-video" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);"></video>
-                <video src="../Videos/Wedding13.mp4" controls muted playsinline class="scroll-video" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);"></video> 
-                <video src="../Videos/Wedding14.mp4" controls muted playsinline class="scroll-video" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);"></video>
-                <video src="../Videos/Wedding15.mp4" controls muted playsinline class="scroll-video" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);"></video>  
-                <video src="../Videos/Wedding16.mp4" controls muted playsinline class="scroll-video" style="width: 100%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);"></video>
-                
+        <!-- Video Section -->
+        <section class="video-section section-padding">
+            <div class="container text-center">
+                <h2 class="gold-text" style="margin-bottom: 2rem;">Wedding Event Highlights</h2>
+                <div style="display: flex; flex-direction: column; gap: 2.5rem; align-items: center;">
+                    <video src="../Videos/Wedding1.mp4" controls muted playsinline preload="metadata" class="scroll-video"></video>
+                    <video src="../Videos/Wedding2.mp4" controls muted playsinline preload="metadata" class="scroll-video"></video>
+                    <video src="../Videos/Wedding3.mp4" controls muted playsinline preload="metadata" class="scroll-video"></video>
+                    <video src="../Videos/Wedding4.mp4" controls muted playsinline preload="metadata" class="scroll-video"></video>
+                    <video src="../Videos/Wedding5.mp4" controls muted playsinline preload="metadata" class="scroll-video"></video>
+                    <video src="../Videos/Wedding6.mp4" controls muted playsinline preload="metadata" class="scroll-video"></video>
+                    <video src="../Videos/Wedding7.mp4" controls muted playsinline preload="metadata" class="scroll-video"></video>
+                    <video src="../Videos/Wedding9.mp4" controls muted playsinline preload="metadata" class="scroll-video"></video>
+                    <video src="../Videos/Wedding10.mp4" controls muted playsinline preload="metadata" class="scroll-video"></video>
+                    <video src="../Videos/Wedding11.mp4" controls muted playsinline preload="metadata" class="scroll-video"></video>
+                    <video src="../Videos/Wedding12.mp4" controls muted playsinline preload="metadata" class="scroll-video"></video>
+                    <video src="../Videos/Wedding13.mp4" controls muted playsinline preload="metadata" class="scroll-video"></video> 
+                    <video src="../Videos/Wedding14.mp4" controls muted playsinline preload="metadata" class="scroll-video"></video>
+                    <video src="../Videos/Wedding15.mp4" controls muted playsinline preload="metadata" class="scroll-video"></video>  
+                    <video src="../Videos/Wedding16.mp4" controls muted playsinline preload="metadata" class="scroll-video"></video>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
+    <footer aria-label="Footer Navigation">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
                     <h4>Ashton Sounds</h4>
-                    <p style="color: var(--text-muted);">Making every occasion special with  professional event managment and entertainment. </p>
+                    <p style="color: var(--text-muted);">Making every occasion special with professional event management and entertainment.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../Ruracios/ruracios.html">Ruracios</a></li>
+                        <li><a href="../Graduation Parties/graduation.html">Graduation Parties</a></li>
                         <li><a href="../Cooperate Events/corporate.html">Corporate Events</a></li>
                         <li><a href="../School Events/school.html">School Events</a></li>
                         <li><a href="../Church Events/church.html">Church Events</a></li>
-                        <li><a href="../Ruracios/ruracios.html">Ruracios</a></li>
                         <li><a href="../Burials/burials.html">Burials</a></li>
-                        <li><a href="../Graduation Parties/graduation.html">Graduation Parties</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul>
-                        <li><a href="tel:0724850033">0724850033</a></li>
-                        <li><a href="https://api.whatsapp.com/send?phone=254724850033">WhatsApp Us</a></li>
-                        <li><a href="#">Naivasha and Mai-Mahiu</a></li>
-                        <li><a href="mailto:Ashtonsounds40@gmail.com">Ashtonsounds40@gmail.com</a></li>
+                        <li><a href="tel:0724850033">📞 0724 850 033</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=254724850033" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a></li>
+                        <li><span>📍 Naivasha and Mai-Mahiu</span></li>
+                        <li><a href="mailto:Ashtonsounds40@gmail.com">✉️ Ashtonsounds40@gmail.com</a></li>
                     </ul>
                 </div>
             </div>

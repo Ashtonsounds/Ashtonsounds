@@ -232,7 +232,6 @@ function initLightbox() {
   const nextBtn = lightbox.querySelector(".lightbox-next");
 
   let currentIndex = 0;
-  let isZoomed = false;
 
   const updateLightboxContent = (index) => {
     currentIndex = index;
@@ -241,9 +240,6 @@ function initLightbox() {
     lightboxImg.alt = imgEl.alt || "Gallery Image";
     lightboxCaption.textContent = imgEl.alt || "";
     lightboxCounter.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
-    
-    lightboxImg.style.transform = "scale(1)";
-    isZoomed = false;
   };
 
   const openLightbox = (index) => {
@@ -278,15 +274,15 @@ function initLightbox() {
   prevBtn.addEventListener("click", showPrev);
 
   lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) closeLightbox();
+    if (e.target === lightbox || e.target.classList.contains("lightbox-content") || e.target.classList.contains("lightbox-img-wrapper")) {
+      closeLightbox();
+    }
   });
 
-  // Toggle Zoom on Image Click
-  lightboxImg.addEventListener("click", () => {
-    isZoomed = !isZoomed;
-    lightboxImg.style.transform = isZoomed ? "scale(1.7)" : "scale(1)";
-    lightboxImg.style.cursor = isZoomed ? "zoom-out" : "zoom-in";
-  });
+  // Disable touch move / scrolling gestures in lightbox
+  lightbox.addEventListener("touchmove", (e) => {
+    e.preventDefault();
+  }, { passive: false });
 
   // Keyboard Shortcuts
   document.addEventListener("keydown", (e) => {
@@ -295,20 +291,6 @@ function initLightbox() {
     if (e.key === "ArrowRight") showNext();
     if (e.key === "ArrowLeft") showPrev();
   });
-
-  // Touch Swipe Support for Mobile
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  lightbox.addEventListener("touchstart", (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  }, { passive: true });
-
-  lightbox.addEventListener("touchend", (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    if (touchStartX - touchEndX > 50) showNext();
-    if (touchEndX - touchStartX > 50) showPrev();
-  }, { passive: true });
 }
 
 /* ==========================================================================

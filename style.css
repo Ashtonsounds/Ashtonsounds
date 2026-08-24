@@ -569,6 +569,7 @@ nav {
   visibility: hidden;
   pointer-events: none;
   transition: var(--transition-normal);
+  touch-action: none;
 }
 
 #lightbox-modal.active {
@@ -584,6 +585,9 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
 }
 
 .lightbox-img-wrapper {
@@ -591,14 +595,21 @@ nav {
   overflow: hidden;
   border-radius: var(--radius-sm);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  touch-action: none;
 }
 
 .lightbox-img {
-  max-width: 90vw;
-  max-height: 80vh;
+  max-width: 85vw;
+  max-height: 75vh;
   object-fit: contain;
-  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+  cursor: default;
+  touch-action: none;
 }
 
 .lightbox-caption {
@@ -612,43 +623,73 @@ nav {
 /* Lightbox Buttons */
 .lightbox-btn {
   position: absolute;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  width: 50px;
-  height: 50px;
+  border: 1px solid rgba(253, 185, 19, 0.35);
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  line-height: 1;
   cursor: pointer;
   z-index: 100002;
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition: var(--transition-fast);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-.lightbox-btn:hover {
+.lightbox-btn:hover,
+.lightbox-btn:active {
   background: var(--primary-color);
   color: #000;
   border-color: var(--primary-color);
-  transform: scale(1.1);
+  transform: scale(1.08);
+  box-shadow: var(--shadow-gold);
 }
 
-.lightbox-close { top: 25px; right: 25px; }
-.lightbox-prev { left: 30px; top: 50%; transform: translateY(-50%); }
-.lightbox-next { right: 30px; top: 50%; transform: translateY(-50%); }
-.lightbox-prev:hover { transform: translateY(-50%) scale(1.1); }
-.lightbox-next:hover { transform: translateY(-50%) scale(1.1); }
+.lightbox-close { 
+  top: 20px; 
+  right: 20px; 
+}
+
+.lightbox-prev { 
+  left: 25px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+}
+
+.lightbox-next { 
+  right: 25px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+}
+
+.lightbox-prev:hover,
+.lightbox-prev:active { 
+  transform: translateY(-50%) scale(1.08); 
+}
+
+.lightbox-next:hover,
+.lightbox-next:active { 
+  transform: translateY(-50%) scale(1.08); 
+}
 
 .lightbox-counter {
   position: absolute;
-  bottom: 25px;
-  left: 30px;
-  color: rgba(255, 255, 255, 0.7);
+  top: 25px;
+  left: 25px;
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* ==========================================================================
@@ -869,8 +910,54 @@ footer {
     gap: 30px;
   }
 
-  .lightbox-prev { left: 10px; }
-  .lightbox-next { right: 10px; }
+  .lightbox-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 1.3rem;
+  }
+
+  .lightbox-close {
+    top: 15px;
+    right: 15px;
+  }
+
+  .lightbox-prev {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .lightbox-next {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .lightbox-prev:hover,
+  .lightbox-prev:active {
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  .lightbox-next:hover,
+  .lightbox-next:active {
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  .lightbox-counter {
+    top: 15px;
+    left: 15px;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+  }
+
+  .lightbox-content {
+    max-width: calc(100vw - 100px);
+  }
+
+  .lightbox-img {
+    max-width: calc(100vw - 110px);
+    max-height: 70vh;
+  }
 }
 
 @media (max-width: 540px) {
@@ -880,6 +967,29 @@ footer {
   
   .btn {
     width: 100%;
+  }
+
+  .lightbox-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+  }
+
+  .lightbox-prev {
+    left: 6px;
+  }
+
+  .lightbox-next {
+    right: 6px;
+  }
+
+  .lightbox-content {
+    max-width: calc(100vw - 90px);
+  }
+
+  .lightbox-img {
+    max-width: calc(100vw - 96px);
+    max-height: 65vh;
   }
 }
 

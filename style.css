@@ -515,7 +515,6 @@ nav {
   box-shadow: var(--shadow-sm);
   background-color: #e5e8ed;
   cursor: pointer;
-  transition: var(--transition-normal);
 }
 
 .gallery-item img {
@@ -523,35 +522,6 @@ nav {
   height: auto;
   display: block;
   object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.3s ease;
-}
-
-.gallery-item::after {
-  content: "🔍";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(2px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.2rem;
-  color: var(--primary-color);
-  opacity: 0;
-  transition: var(--transition-normal);
-}
-
-.gallery-item:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-}
-
-.gallery-item:hover img {
-  transform: scale(1.08);
-}
-
-.gallery-item:hover::after {
-  opacity: 1;
 }
 
 /* Lightbox Modal */
